@@ -1,0 +1,43 @@
+{
+    "student":[
+        {
+            "id": "1",
+            "Reference_Number":"12345678" ,
+            "Personal_Email":"jnrdrkw1@gmail.com",
+            "School_Email":"jdarkwah1@st.knust.edu.gh",
+            "Phone_Number":"0548153908"
+        },
+        {
+            "id": "2",
+            "Reference_Number":"14725836" ,
+            "Personal_Email":"john@gmail.com",
+            "School_Email":"john@st.knust.edu.gh",
+            "Phone_Number":"0545374155",
+            "Image_Url":"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": "3",
+            "Reference_Number":"20774526" ,
+            "Personal_Email":"james@gmail.com",
+            "School_Email":"james@st.knust.edu.gh",
+            "Phone_Number":"0543331337",
+            "Image_Url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSgYOtQgtuEY-1bKHCaXEUzjKzI73pZa0JFPCfZmw7aNUvpY8J49ZY-9Yp2tD1kP0cPFY&usqp=CAU"
+        },
+        {
+            "id": "4",
+            "Reference_Number":"74581232" ,
+            "Personal_Email":"junior@gmail.com",
+            "School_Email":"junior@st.knust.edu.gh",
+            "Phone_Number":"0208961943",
+            "Image_Url":"https://media.gettyimages.com/photos/confident-young-man-wearing-purple-tshirt-picture-id1092658864?s=612x612"
+        },
+        {
+            "id": "5",
+            "Reference_Number":"78945612" ,
+            "Personal_Email":"nathaniel@gmail.com",
+            "School_Email":"nathaniel@st.knust.edu.gh",
+            "Phone_Number":"0240593114",
+            "Image_Url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu66eWFTChfTMXolMyWOLBNt4tGV2aiofDS2Bd-QDay1eZWdRuioj9QfWWQMSSbDWinH4&usqp=CAU"
+        }
+    ]
+}
