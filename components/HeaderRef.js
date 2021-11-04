@@ -8,7 +8,7 @@ const HeaderRef = () => {
         <View style={styles.header}>
         <Image source={require('../assets/img/aim.png')} style={styles.headerImg} />
         <View style={styles.headerAvatar}>
-        <Avatar rounded  size="xlarge" source={{uri:"https://w7.pngwing.com/pngs/997/111/png-transparent-graduation-profile-picture-circle-silhouette-avatar-head-account-round-flat.png"}}/>
+        <Avatar rounded  size="xlarge" source={require('../assets/img/avatar.jpg')}/>
         </View>
         </View>
         </SafeAreaView>
