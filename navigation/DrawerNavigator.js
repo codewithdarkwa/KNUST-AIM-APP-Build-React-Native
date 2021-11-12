@@ -1,6 +1,7 @@
 import React from 'react';
+import {View,SafeAreaView, Image, ImageBackground} from 'react-native'
 import {FontAwesome,MaterialIcons,FontAwesome5} from 'react-native-vector-icons';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerItemList, } from '@react-navigation/drawer';
 import MainStackNavigator from './StackNavigator';
 import Profile from '../projects/Profile';
 import Registration from '../projects/Registration';
@@ -11,10 +12,29 @@ import CourseMaterial from '../projects/Course_Material';
 import Lecturer_Assessment from '../projects/Lecturer_Assessment';
 import settings from '../projects/settings';
 import Help_feedback from '../projects/Help_feedback';
+
 const Drawer = createDrawerNavigator();
+
 const DrawerNavigator = () => {
     return (
-        <Drawer.Navigator>
+        <Drawer.Navigator
+        drawerContent ={(props)=>{
+            return(
+                <SafeAreaView>
+                <ImageBackground source={require('../assets/img/Darkwa.jpg')} style={{
+                    height:150,
+                    width:280,
+                    alignItems:'flex-start',
+                    justifyContent: 'center',
+                    backgroundColor:"cyan"
+                }}>
+                <Image  source={require('../assets/img/John.png')} style={{width:80,height:80,borderRadius:80/2,marginBottom:70}}/>
+                </ImageBackground>
+                <DrawerItemList {...props} />
+                </SafeAreaView>
+            )
+        }}
+        >
         <Drawer.Screen 
         name="Home" 
         component={MainStackNavigator}
