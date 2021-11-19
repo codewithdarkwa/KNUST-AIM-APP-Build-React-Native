@@ -1,10 +1,20 @@
 import React,{useState,useEffect} from 'react'
-import { StyleSheet, Text, View,TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View,TouchableOpacity,SafeAreaView} from 'react-native'
 import {Input,Button,Avatar} from 'react-native-elements';
 import Loading from '../components/Loading';
 import Header from '../components/header';
 
+import {useTheme} from '../hooks/ThemeContext'
+
 const LoginScreen = ({navigation}) => {
+
+    const DarkTheme = useTheme();
+    const themeStyles ={
+        backgroundColor: DarkTheme ? '#121212' : '#fff',
+            txtColor: '#fff',
+            icon: '#fff',
+        }
+        
 
     const [username, setusername]=useState("");
     const [password, setpassword]=useState("");
@@ -30,7 +40,7 @@ useEffect(() => {
         { !loading ?(
              <Loading />
         ):(
-            <>
+            <SafeAreaView style={themeStyles}>
             <Header/>
             <View style={styles.container}>
              <Input style={styles.inputContainer}
@@ -58,7 +68,7 @@ useEffect(() => {
              <Avatar size="small" rounded source={require('../assets/img/slip.png')}/>
              <Avatar size="small" rounded source={require('../assets/img/user.png')}/>
              </View>
-          </>
+          </SafeAreaView>
          )
         }
         </>
@@ -76,7 +86,7 @@ const styles = StyleSheet.create({
     inputContainer:{
       padding:10,
       width:300,
-      marginTop:5
+      marginTop:17
   },
   btn:{
       backgroundColor:"#990000",

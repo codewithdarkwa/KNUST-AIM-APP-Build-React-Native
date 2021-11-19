@@ -12,10 +12,20 @@ import CourseMaterial from '../projects/Course_Material';
 import Lecturer_Assessment from '../projects/Lecturer_Assessment';
 import settings from '../projects/settings';
 import Help_feedback from '../projects/Help_feedback';
+import {useTheme,useThemeUpdate} from '../hooks/ThemeContext'
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
+
+    const DarkTheme = useTheme();
+    const toggleTheme = useThemeUpdate();
+
+    const themeStyles ={
+        backgroundColor: DarkTheme ? '#121212' : '#fff',
+            txtColor: '#fff',
+            icon: '#fff',
+        }
     return (
         <Drawer.Navigator
         drawerContent ={(props)=>{
@@ -41,7 +51,7 @@ const DrawerNavigator = () => {
         options={{
         headerShown:false,
          drawerIcon:({focused,size})=>(
-       <FontAwesome name="home" size={25}/>
+       <FontAwesome name="home" size={25} color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )}}/>
         <Drawer.Screen  
         name="Profile" 
@@ -49,7 +59,7 @@ const DrawerNavigator = () => {
         options={{
         headerShown:false,
         drawerIcon:({focused,size})=>(
-        <FontAwesome name="user" size={25}/>
+        <FontAwesome name="user" size={25} color={DarkTheme ? themeStyles.icon : '#fff'}/>
         )
         }}/>
         <Drawer.Screen
@@ -57,14 +67,14 @@ const DrawerNavigator = () => {
          component={Registration}
         options={{
         drawerIcon:({focused,size})=>(
-        <FontAwesome5 name="file-invoice" size={25}/>
+        <FontAwesome5 name="file-invoice" size={25} color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )}}/>
         <Drawer.Screen 
         name="Results" 
         component={Results}
         options={{
         drawerIcon:({focused,size})=>(
-        <FontAwesome name="check-square" size={25}/>
+        <FontAwesome name="check-square" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'} />
             )}}/>
         
         <Drawer.Screen 
@@ -72,18 +82,18 @@ const DrawerNavigator = () => {
         component={Fees}
         options={{
         drawerIcon:({focused,size})=>(
-         <FontAwesome name="money" size={25}/>
+         <FontAwesome name="money" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )}}/>
         <Drawer.Screen name="Notifications" component={Notification}
         options={{
             drawerIcon:({focused,size})=>(
-                <FontAwesome name="bell" size={25}/>
+                <FontAwesome name="bell" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             ) }}/>
         
         <Drawer.Screen name="Course Materials" component={CourseMaterial} 
         options={{
             drawerIcon:({focused,size})=>(
-                <FontAwesome name="file-text" size={25}/>
+                <FontAwesome name="file-text" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )
             }}/>
     
@@ -92,14 +102,14 @@ const DrawerNavigator = () => {
          component={Lecturer_Assessment} 
         options={{
         drawerIcon:({focused,size})=>(
-        <FontAwesome5 name="user-check" size={25}/>
+        <FontAwesome5 name="user-check" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )}}/>
         <Drawer.Screen 
         name="Settings" 
         component={settings}
         options={{
             drawerIcon:({focused,size})=>(
-                <FontAwesome name="cog" size={25}/>
+                <FontAwesome name="cog" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             ) }}/>
         
         <Drawer.Screen 
@@ -107,7 +117,7 @@ const DrawerNavigator = () => {
         component={Help_feedback}
          options={{
         drawerIcon:({focused,size})=>(
-       <MaterialIcons name="help-center" size={25}/>
+       <MaterialIcons name="help-center" size={25}  color={DarkTheme ? themeStyles.icon : '#fff'}/>
             )
          }}/>
         </Drawer.Navigator>

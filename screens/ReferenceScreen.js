@@ -2,8 +2,16 @@ import React,{useState,useEffect} from 'react'
 import { StyleSheet, View} from 'react-native'
 import {Input,Button,Avatar} from 'react-native-elements'
 import HeaderRef from '../components/HeaderRef';
+import {useTheme} from '../hooks/ThemeContext'
 
 const ReferenceScreen = ({navigation}) => {
+
+  const DarkTheme = useTheme();
+    const themeStyles ={
+        backgroundColor: DarkTheme ? '#121212' : '#fff',
+            txtColor: '#fff',
+            icon: '#fff',
+        }
 
     const [StudentId, setStudentId]=useState("");
 
@@ -18,7 +26,7 @@ const ReferenceScreen = ({navigation}) => {
     return (
       <>
         
-        <View>
+        <View style={themeStyles}>
        <HeaderRef/>
        <View style={styles.container}>
         <Input style={styles.inputContainer}
@@ -54,7 +62,7 @@ const styles = StyleSheet.create({
     inputContainer:{
       padding:15,
       width:300,
-     marginTop:100
+     marginTop:110
   },
   btn:{
       backgroundColor:"#990000",
