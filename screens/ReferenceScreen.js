@@ -9,9 +9,7 @@ const ReferenceScreen = ({navigation}) => {
   const DarkTheme = useTheme();
     const themeStyles ={
         backgroundColor: DarkTheme ? '#121212' : '#fff',
-            txtColor: '#fff',
-            icon: '#fff',
-        }
+   }
 
     const [StudentId, setStudentId]=useState("");
 
