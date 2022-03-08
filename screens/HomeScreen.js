@@ -75,7 +75,7 @@ const HomeScreen = ({ navigation }) => {
               : { backgroundColor: themeStyles.txtColor }
           }
         >
-          <Card.Image source={require("../assets/img/image.jpeg")}></Card.Image>
+          <Card.Image source={require("../assets/img/image.jpg")}></Card.Image>
         </Card>
 
         <Card
@@ -110,7 +110,7 @@ const HomeScreen = ({ navigation }) => {
             style={{
               flexDirection: "row",
               justifyContent: "space-around",
-              left: 30,
+              left: 10,
             }}
           >
             <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
@@ -122,9 +122,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Profile
@@ -138,9 +136,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Results
@@ -156,9 +152,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Registration
@@ -167,9 +161,9 @@ const HomeScreen = ({ navigation }) => {
           <View
             style={{
               flexDirection: "row",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
               marginTop: 45,
-              left: 40,
+              left: 10,
             }}
           >
             <TouchableOpacity
@@ -183,9 +177,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Notification
@@ -199,9 +191,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Fees
@@ -217,9 +207,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <Text
               style={
-                DarkTheme
-                  ? { color: themeStyles.txtColor, top: 50, right: 50 }
-                  : { color: "black", top: 50, right: 50 }
+                DarkTheme ? { color: themeStyles.txtColor } : { color: "black" }
               }
             >
               Course Materials

@@ -1,17 +1,14 @@
-import React,{useState} from 'react'
-import { StyleSheet, Text, View,Button } from 'react-native'
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
 const Programme = () => {
- 
-    return (
-       <>
-    <View>
+  return (
+    <>
+      <View></View>
+    </>
+  );
+};
 
-    </View>
-       </>
-    )
-}
+export default Programme;
 
-export default Programme
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
