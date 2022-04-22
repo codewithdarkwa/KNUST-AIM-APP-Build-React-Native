@@ -45,9 +45,9 @@ const styles = StyleSheet.create({
     height: 70,
     display: "flex",
     left: width / 3,
-    marginTop: 20,
+    marginTop: 25,
   },
   headerAvatar: {
-    left: 130,
+    left: 100,
   },
 });

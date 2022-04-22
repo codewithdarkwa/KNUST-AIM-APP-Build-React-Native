@@ -11,7 +11,7 @@ import { ThemeProvider } from "./hooks/ThemeContext";
 export default function App() {
   return (
     <ThemeProvider>
-      <NavigationContainer>
+      <NavigationContainer theme={DarkTheme}>
         <DrawerNavigator />
       </NavigationContainer>
     </ThemeProvider>
