@@ -13,9 +13,14 @@ const ReferenceScreen = ({ navigation }) => {
   const [StudentId, setStudentId] = useState("");
 
   const Login = () => {
-    if (StudentId.length == 0) {
-      alert("Required Field is missing");
-    } else navigation.replace("Login");
+    {
+      StudentId.length == 0
+        ? alert("Required filled missing")
+        : navigation.replace("Login");
+    }
+    // if (StudentId.length == 0) {
+    //   alert("Required Field is missing");
+    // } else navigation.replace("Login");
   };
 
   return (

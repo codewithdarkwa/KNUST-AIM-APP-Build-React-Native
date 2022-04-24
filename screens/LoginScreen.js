@@ -23,9 +23,11 @@ const LoginScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
 
   const Verify = () => {
-    if (username.length == 0 || password.length == 0) {
-      alert("Required field is missing");
-    } else navigation.replace("AIM");
+    {
+      username.length == 0 || password.length == 0
+        ? alert("Required field is missing")
+        : navigation.replace("AIM");
+    }
   };
 
   useEffect(() => {
