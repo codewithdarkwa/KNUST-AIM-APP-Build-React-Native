@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { Input, Button, Avatar } from "react-native-elements";
 import HeaderRef from "../components/HeaderRef";
@@ -95,6 +95,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+    width: "100%",
+    height: "100%",
   },
   inputContainer: {
     padding: 15,
