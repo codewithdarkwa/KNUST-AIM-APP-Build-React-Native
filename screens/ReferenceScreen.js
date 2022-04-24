@@ -70,11 +70,17 @@ const ReferenceScreen = ({ navigation }) => {
           style={{
             flexDirection: "row",
             justifyContent: "center",
-            marginTop: 320,
+            marginTop: 300,
           }}
         >
           {AvatarSrc.map((avatar) => (
-            <Avatar size="small" rounded source={avatar.src} key={avatar.id} />
+            <Avatar
+              size="small"
+              rounded
+              source={avatar.src}
+              key={avatar.id}
+              containerStyle={{ margin: 5, bottom: 50 }}
+            />
           ))}
         </View>
       </View>

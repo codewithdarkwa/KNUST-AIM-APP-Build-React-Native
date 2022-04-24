@@ -110,6 +110,7 @@ const LoginScreen = ({ navigation }) => {
                 rounded
                 source={avatar.src}
                 key={avatar.id}
+                containerStyle={{ margin: 5, bottom: 50 }}
               />
             ))}
           </View>
