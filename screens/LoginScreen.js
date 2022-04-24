@@ -35,7 +35,32 @@ const LoginScreen = ({ navigation }) => {
       setLoading(true);
     }, 1000);
   }, []);
-
+  const AvatarSrc = [
+    {
+      id: 1,
+      src: require("../assets/img/results.png"),
+    },
+    {
+      id: 2,
+      src: require("../assets/img/registration.png"),
+    },
+    {
+      id: 3,
+      src: require("../assets/img/profile.png"),
+    },
+    {
+      id: 4,
+      src: require("../assets/img/notification.png"),
+    },
+    {
+      id: 5,
+      src: require("../assets/img/slip.png"),
+    },
+    {
+      id: 6,
+      src: require("../assets/img/user.png"),
+    },
+  ];
   return (
     <>
       {!loading ? (
@@ -76,39 +101,17 @@ const LoginScreen = ({ navigation }) => {
             style={{
               flexDirection: "row",
               justifyContent: "center",
-              marginTop: 200,
+              marginTop: 250,
             }}
           >
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/results.png")}
-            />
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/registration.png")}
-            />
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/profile.png")}
-            />
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/notification.png")}
-            />
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/slip.png")}
-            />
-            <Avatar
-              size="small"
-              rounded
-              source={require("../assets/img/user.png")}
-            />
+            {AvatarSrc.map((avatar) => (
+              <Avatar
+                size="small"
+                rounded
+                source={avatar.src}
+                key={avatar.id}
+              />
+            ))}
           </View>
         </SafeAreaView>
       )}
@@ -134,5 +137,6 @@ const styles = StyleSheet.create({
     width: 300,
     borderRadius: 20,
     color: "#fff",
+    margin: 10,
   },
 });
