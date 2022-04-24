@@ -42,6 +42,7 @@ const HomeScreen = ({ navigation }) => {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
+            alignItems: "center",
             width: 60,
             marginRight: 0.5,
           }}
@@ -75,7 +76,7 @@ const HomeScreen = ({ navigation }) => {
               : { backgroundColor: themeStyles.txtColor }
           }
         >
-          <Card.Image source={require("../assets/img/image.jpg")}></Card.Image>
+          <Card.Image source={require("../assets/img/image.jpg")} />
         </Card>
 
         <Card
@@ -233,8 +234,13 @@ const HomeScreen = ({ navigation }) => {
           <Text
             style={
               DarkTheme
-                ? { fontSize: 20, bottom: 10, color: themeStyles.txtColor }
-                : { fontSize: 20, bottom: 10, color: "black" }
+                ? {
+                    fontSize: 20,
+                    bottom: 10,
+                    color: themeStyles.txtColor,
+                    margin: 7,
+                  }
+                : { fontSize: 20, bottom: 10, color: "black", margin: 7 }
             }
           >
             jnrdrkw1@gmail.com
@@ -251,8 +257,13 @@ const HomeScreen = ({ navigation }) => {
           <Text
             style={
               DarkTheme
-                ? { fontSize: 17, top: 10, color: themeStyles.txtColor }
-                : { fontSize: 17, top: 10, color: "black" }
+                ? {
+                    fontSize: 17,
+                    top: 10,
+                    color: themeStyles.txtColor,
+                    margin: 7,
+                  }
+                : { fontSize: 17, top: 10, color: "black", margin: 7 }
             }
           >
             0548153908
