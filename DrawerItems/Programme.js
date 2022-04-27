@@ -4,7 +4,7 @@ import { StyleSheet, View } from "react-native";
 const Programme = () => {
   return (
     <>
-      <View></View>
+      <View>Program will be here</View>
     </>
   );
 };
