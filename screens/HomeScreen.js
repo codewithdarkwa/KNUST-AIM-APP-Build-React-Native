@@ -33,7 +33,7 @@ const HomeScreen = ({ navigation }) => {
             activeOpacity={0.5}
             onPress={() => navigation.toggleDrawer()}
           >
-            <Icon name="menu" size={24} color="#fff" />
+            <Icon name="menu" size={24} color="#fff"/>
           </TouchableOpacity>
         </View>
       ),

@@ -21,6 +21,7 @@ const header = () => {
             rounded
             size="xlarge"
             source={require("../assets/img/John.png")}
+            containerStyle={{alignSelf:'center',top:20}}
           />
         </View>
       </View>
@@ -43,11 +44,6 @@ const styles = StyleSheet.create({
   headerImg: {
     width: 150,
     height: 70,
-    display: "flex",
-    left: width / 3,
-    marginTop: 25,
-  },
-  headerAvatar: {
-    left: 100,
+    alignSelf:'center',
   },
 });
