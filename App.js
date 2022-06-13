@@ -1,5 +1,4 @@
 import "react-native-gesture-handler";
-import React from "react";
 import { NavigationContainer, DarkTheme } from "@react-navigation/native";
 import DrawerNavigator from "./navigation/DrawerNavigator";
 import { ThemeProvider } from "./hooks/ThemeContext";
